@@ -1,5 +1,7 @@
 {
   "resources": [
+    {"id":{"name":"INITIALIZE","path":"scripts/INITIALIZE/INITIALIZE.yy",},"order":1,},
+    {"id":{"name":"ENTITY","path":"scripts/ENTITY/ENTITY.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
