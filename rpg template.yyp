@@ -8,6 +8,7 @@
     {"id":{"name":"INPUT","path":"scripts/INPUT/INPUT.yy",},"order":2,},
     {"id":{"name":"spr_actor_mask","path":"sprites/spr_actor_mask/spr_actor_mask.yy",},"order":1,},
     {"id":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"order":1,},
+    {"id":{"name":"spr_female_office_worker_run","path":"sprites/spr_female_office_worker_run/spr_female_office_worker_run.yy",},"order":2,},
     {"id":{"name":"ENTITY","path":"scripts/ENTITY/ENTITY.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
