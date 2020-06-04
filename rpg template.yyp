@@ -1,6 +1,11 @@
 {
   "resources": [
+    {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},"order":0,},
+    {"id":{"name":"spr_female_office_worker_idle","path":"sprites/spr_female_office_worker_idle/spr_female_office_worker_idle.yy",},"order":0,},
     {"id":{"name":"INITIALIZE","path":"scripts/INITIALIZE/INITIALIZE.yy",},"order":1,},
+    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":2,},
+    {"id":{"name":"spr_actor_mask","path":"sprites/spr_actor_mask/spr_actor_mask.yy",},"order":1,},
+    {"id":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"order":1,},
     {"id":{"name":"ENTITY","path":"scripts/ENTITY/ENTITY.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
@@ -44,6 +49,7 @@
     {"folderPath":"folders/Animation Curves.yy","order":12,"resourceVersion":"1.0","name":"Animation Curves","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Notes.yy","order":13,"resourceVersion":"1.0","name":"Notes","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Extensions.yy","order":14,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Characters.yy","order":1,"resourceVersion":"1.0","name":"Characters","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
