@@ -1,1 +1,1 @@
-initialize_entity(1,0.1,0.1);
+initialize_entity(2,0.1,0.1);
