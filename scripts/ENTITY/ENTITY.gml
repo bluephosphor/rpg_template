@@ -1,3 +1,12 @@
+function tile_place_meeting(col_map){
+	var _top_right = tilemap_get_at_pixel(col_map, bbox_right-1, bbox_top);
+	var _top_left = tilemap_get_at_pixel(col_map, bbox_left, bbox_top);
+	var _bottom_right = tilemap_get_at_pixel(col_map, bbox_right-1, bbox_bottom-1);
+	var _bottom_left = tilemap_get_at_pixel(col_map, bbox_left, bbox_bottom-1);
+	
+	return _top_right || _top_left || _bottom_right || _bottom_left;
+}
+
 function move_and_collide(){
 	input_direction = point_direction(0,0,in_right-in_left, in_down-in_up);
 	input_magnitude = (in_right-in_left != 0) or (in_down-in_up != 0);
@@ -6,25 +15,45 @@ function move_and_collide(){
 	spd.y = lengthdir_y(input_magnitude * max_spd, input_direction);
 	
 	var _collision = false;
-	//horizonal tiles
-	if (tilemap_get_at_pixel(collision_map, x + spd.x, y)){
-		x -= x mod CELLSIZE;
-		if (sign(spd.x) == 1) x += CELLSIZE -1;
-		spd.x = 0;
-		_collision = true;
-	}
-	//horizontal move commit
+
+	// Move horizontally
 	x += spd.x;
-	
-	//vertical tiles
-	if (tilemap_get_at_pixel(collision_map, x, y + spd.y)){
-		y -= y mod CELLSIZE;
-		if (sign(spd.y) == 1) y += CELLSIZE -1;
-		spd.y = 0;
-		_collision = true;
+
+	// Right collisions
+	if spd.x > 0 {
+		if (tile_place_meeting(collision_map)) {
+			x = bbox_right&~(CELLSIZE-1);
+			x -= bbox_right-x;
+			spd.x = 0;
+		}
+	} else if spd.x < 0 {
+		// Left collisions
+		if (tile_place_meeting(collision_map)) {
+			x = bbox_left&~(CELLSIZE-1);
+			x += CELLSIZE+x-bbox_left;
+			spd.x = 0;
+		}
 	}
-	//vertiacl move commit
+
+	// Move vertically
 	y += spd.y;
+
+	// Vertical collisions
+	if spd.y > 0 {
+		// Bottom collisions
+		if (tile_place_meeting(collision_map)) {
+			y = bbox_bottom&~(CELLSIZE-1);
+			y -= bbox_bottom-y;
+			spd.y = 0;
+		}
+	} else if spd.y < 0 {
+		// Top collisions
+		if (tile_place_meeting(collision_map)) {
+			y = bbox_top&~(CELLSIZE-1);
+			y += CELLSIZE+y-bbox_top;
+			spd.y = 0;
+		}
+	}
 	
 	return _collision;
 }
@@ -43,3 +72,4 @@ function actor_animate_sprite() {
 		animation_end = false;
 	}
 }
+

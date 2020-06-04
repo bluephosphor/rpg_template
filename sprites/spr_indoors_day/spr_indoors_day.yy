@@ -22,8 +22,8 @@
     "path": "texturegroups/Default",
   },
   "swatchColours": null,
-  "gridX": 0,
-  "gridY": 0,
+  "gridX": 32,
+  "gridY": 32,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"524cb540-c45c-4bed-baa9-ed4fcf2545ee","path":"sprites/spr_indoors_day/spr_indoors_day.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"524cb540-c45c-4bed-baa9-ed4fcf2545ee","path":"sprites/spr_indoors_day/spr_indoors_day.yy",},"LayerId":{"name":"8ac3962d-3461-4846-9e1d-d6e1d4af1352","path":"sprites/spr_indoors_day/spr_indoors_day.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},

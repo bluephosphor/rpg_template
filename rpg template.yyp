@@ -14,6 +14,7 @@
     {"id":{"name":"ts_town","path":"tilesets/ts_town/ts_town.yy",},"order":3,},
     {"id":{"name":"spr_actor_mask","path":"sprites/spr_actor_mask/spr_actor_mask.yy",},"order":1,},
     {"id":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"order":1,},
+    {"id":{"name":"spr_shadow","path":"sprites/spr_shadow/spr_shadow.yy",},"order":3,},
     {"id":{"name":"spr_indoors_day","path":"sprites/spr_indoors_day/spr_indoors_day.yy",},"order":0,},
     {"id":{"name":"ts_col","path":"tilesets/ts_col/ts_col.yy",},"order":0,},
     {"id":{"name":"ts_indoors_night","path":"tilesets/ts_indoors_night/ts_indoors_night.yy",},"order":2,},
