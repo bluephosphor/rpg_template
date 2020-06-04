@@ -14,6 +14,10 @@ function move_and_collide(){
 	spd.x = lengthdir_x(input_magnitude * max_spd, input_direction);
 	spd.y = lengthdir_y(input_magnitude * max_spd, input_direction);
 	
+	in_right	= false;
+	in_up		= false;
+	in_left		= false;
+	in_down		= false;
 	var _collision = false;
 
 	// Move horizontally

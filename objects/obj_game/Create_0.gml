@@ -9,3 +9,7 @@ with (instance_create_layer(x,y,layer,obj_actor)){
 controller = {
 	camera: instance_create_layer(x,y,layer,obj_camera)
 }
+
+char_index = 0;
+actor_list = -1;
+alarm[0] = 1;
