@@ -5,8 +5,28 @@ function move_and_collide(){
 	spd.x = lengthdir_x(input_magnitude * max_spd, input_direction);
 	spd.y = lengthdir_y(input_magnitude * max_spd, input_direction);
 	
+	var _collision = false;
+	//horizonal tiles
+	if (tilemap_get_at_pixel(collision_map, x + spd.x, y)){
+		x -= x mod CELLSIZE;
+		if (sign(spd.x) == 1) x += CELLSIZE -1;
+		spd.x = 0;
+		_collision = true;
+	}
+	//horizontal move commit
 	x += spd.x;
+	
+	//vertical tiles
+	if (tilemap_get_at_pixel(collision_map, x, y + spd.y)){
+		y -= y mod CELLSIZE;
+		if (sign(spd.y) == 1) y += CELLSIZE -1;
+		spd.y = 0;
+		_collision = true;
+	}
+	//vertiacl move commit
 	y += spd.y;
+	
+	return _collision;
 }
 
 function actor_animate_sprite() {

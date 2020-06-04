@@ -1,3 +1,5 @@
+collision_map = layer_tilemap_get_id(layer_get_id("Col"));
+
 image_speed = 0;
 max_spd = 2;
 spd = new vec2(0,0);
