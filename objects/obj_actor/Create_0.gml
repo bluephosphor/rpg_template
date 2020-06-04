@@ -1,4 +1,6 @@
-initialize_entity(2,0.5,0.5);
+image_speed = 0;
+max_spd = 2;
+spd = new vec2(0,0);
 
 in_right	= false;
 in_up		= false;

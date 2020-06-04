@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},"order":0,},
     {"id":{"name":"spr_female_office_worker_idle","path":"sprites/spr_female_office_worker_idle/spr_female_office_worker_idle.yy",},"order":0,},
+    {"id":{"name":"fnt_debug","path":"fonts/fnt_debug/fnt_debug.yy",},"order":0,},
     {"id":{"name":"INITIALIZE","path":"scripts/INITIALIZE/INITIALIZE.yy",},"order":1,},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":2,},
     {"id":{"name":"INPUT","path":"scripts/INPUT/INPUT.yy",},"order":2,},
