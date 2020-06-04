@@ -11,5 +11,5 @@ input = ds_list_create();
 
 input[| key.right]	= vk_right;
 input[| key.up]		= vk_up;
-input[| key.right]	= vk_left;
-input[| key.right]	= vk_down;
+input[| key.left]	= vk_left;
+input[| key.down]	= vk_down;
