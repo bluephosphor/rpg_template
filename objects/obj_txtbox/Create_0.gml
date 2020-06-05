@@ -2,7 +2,7 @@ tb_width = 200;
 tb_height = 32;
 
 text_offset = 4
-text_max_width = 180;
+text_max_width = tb_width - (text_offset * 2);
 
 line_spacing = string_height("M");
 
