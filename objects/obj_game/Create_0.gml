@@ -14,7 +14,7 @@ controller = {
 
 init_input();
 
-function set_char(){
+set_char = function(){
 	player_character = actor_list[char_index];
 	controller.camera.following = player_character;
 	
