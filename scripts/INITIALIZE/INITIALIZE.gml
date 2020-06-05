@@ -1,6 +1,8 @@
 #macro FRAMERATE 60
 #macro CELLSIZE 32
 #macro VIEW view_camera[0]
+#macro NAME 0
+#macro MESSAGE 1
 
 function vec2(x,y) constructor {
 	self.x = x;

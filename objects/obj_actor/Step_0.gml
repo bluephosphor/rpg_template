@@ -1,3 +1,5 @@
+depth = -bbox_bottom;
+
 if (player_character == id){
 	in_right	= keyboard_check(input[| key.right]);
 	in_up		= keyboard_check(input[| key.up]);

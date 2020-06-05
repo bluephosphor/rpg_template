@@ -7,8 +7,8 @@ true_pixel_mode = true;
 view_width = 320;
 view_height = 180;
 
-following = player_character;
-follow_spd = 0.5;
+following = -1;
+follow_spd = 0.3;
 
 pixel_scale = 3;
 
