@@ -13,6 +13,5 @@ for (i = 0; i < array_length(data_structures); i++){
 		ds_map_destroy(ds);
 		str = "map";
 	}
-	
 	if (is_string(str)) show_debug_message("Destroyed a " + str + "!");
 }

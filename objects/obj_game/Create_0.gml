@@ -3,17 +3,14 @@ globalvar player_character, controller, data_structures, ds_index, textbox, room
 room_count = 0; 
 while (room_exists(room_count)) room_count++;
 
-controller = {
-	camera: instance_create_layer(x,y,layer,obj_camera)
-}
-
-char_index = 0;
-actor_list = -1;
 ds_index = 0;
-alarm[0] = 1;
-
 textbox = noone;
 enum tb {open,type,close};
+
+controller = {
+	camera: instance_create_layer(x,y,layer,obj_camera),
+	depthsorter: instance_create_layer(x,y,layer,obj_depthsorter)
+}
 
 init_input();
 

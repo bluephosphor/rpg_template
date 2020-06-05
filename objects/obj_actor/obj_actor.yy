@@ -10,7 +10,10 @@
     "path": "sprites/spr_actor_mask/spr_actor_mask.yy",
   },
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "par_depthobject",
+    "path": "objects/par_depthobject/par_depthobject.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
