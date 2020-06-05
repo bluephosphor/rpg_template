@@ -1,4 +1,7 @@
-globalvar player_character, controller, data_structures, ds_index, textbox;
+globalvar player_character, controller, data_structures, ds_index, textbox, room_count;
+
+room_count = 0; 
+while (room_exists(room_count)) room_count++;
 
 controller = {
 	camera: instance_create_layer(x,y,layer,obj_camera)

@@ -2,7 +2,7 @@ var c, name;
 
 c = c_black;
 draw_rectangle_color((view_width / 2) - draw_width, y_origin,(view_width / 2) + draw_width, y_origin + tb_height, c,c,c,c, false);
-c = c_fuchsia;
+c = c_white;
 draw_rectangle_color((view_width / 2) - draw_width, y_origin,(view_width / 2) + draw_width, y_origin + tb_height, c,c,c,c, true);
 
 if (state != tb.type) exit;

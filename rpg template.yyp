@@ -19,6 +19,7 @@
     {"id":{"name":"obj_txtbox","path":"objects/obj_txtbox/obj_txtbox.yy",},"order":3,},
     {"id":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},"order":1,},
     {"id":{"name":"spr_witch_idle","path":"sprites/spr_witch_idle/spr_witch_idle.yy",},"order":3,},
+    {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},"order":1,},
     {"id":{"name":"spr_shadow","path":"sprites/spr_shadow/spr_shadow.yy",},"order":3,},
     {"id":{"name":"spr_indoors_day","path":"sprites/spr_indoors_day/spr_indoors_day.yy",},"order":0,},
     {"id":{"name":"ts_col","path":"tilesets/ts_col/ts_col.yy",},"order":0,},
@@ -53,6 +54,7 @@
   },
   "RoomOrder": [
     {"name":"Room1","path":"rooms/Room1/Room1.yy",},
+    {"name":"Room2","path":"rooms/Room2/Room2.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

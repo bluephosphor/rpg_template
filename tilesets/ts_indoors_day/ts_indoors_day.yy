@@ -1,5 +1,4 @@
 {
-  "name": "ts_indoors_day",
   "spriteId": {
     "name": "spr_indoors_day",
     "path": "sprites/spr_indoors_day/spr_indoors_day.yy",
@@ -4988,6 +4987,7 @@
     "path": "folders/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
+  "name": "ts_indoors_day",
   "tags": [],
   "resourceType": "GMTileSet",
 }

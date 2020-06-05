@@ -1,5 +1,5 @@
 tb_width = 200;
-tb_height = 64;
+tb_height = 32;
 
 text_offset = 4
 text_max_width = 180;

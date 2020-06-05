@@ -1,5 +1,4 @@
 {
-  "name": "ts_town",
   "spriteId": {
     "name": "spr_town",
     "path": "sprites/spr_town/spr_town.yy",
@@ -517,6 +516,7 @@
     "path": "folders/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
+  "name": "ts_town",
   "tags": [],
   "resourceType": "GMTileSet",
 }
