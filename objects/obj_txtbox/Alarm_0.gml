@@ -16,6 +16,6 @@ if (char_index < string_length(string_wrapped)) {
 	}
 	char_index++;
 	current_string = string_copy(string_wrapped,1,char_index);
-} else if (alarm_get(1) == -1){
+} else if (autoscroll and alarm_get(1) == -1){
 	alarm[1] = room_speed * 2;
 }

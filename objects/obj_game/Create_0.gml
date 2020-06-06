@@ -1,10 +1,11 @@
-globalvar player_character, controller, data_structures, ds_index, textbox, room_count;
+globalvar player_character, controller, data_structures, ds_index, textbox, room_count, fullscreen;
 
 room_count = 0; 
 while (room_exists(room_count)) room_count++;
 
 ds_index = 0;
 textbox = noone;
+fullscreen = false;
 enum tb {open,type,close};
 
 controller = {

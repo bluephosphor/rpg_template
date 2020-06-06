@@ -5,6 +5,7 @@ function add_dialog(name,str){
 			dialog[NAME, lines] = name;
 			dialog[MESSAGE, lines++] = str;
 			string_wrapped = string_wrap(dialog[MESSAGE,lines_index], text_max_width);
+			name_width = string_width(dialog[NAME,lines_index]) + 8;
 		}
 	} else {
 		with (textbox){

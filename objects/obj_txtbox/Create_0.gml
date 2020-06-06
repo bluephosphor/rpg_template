@@ -1,5 +1,5 @@
 tb_width = 200;
-tb_height = 32;
+tb_height = 30;
 
 text_offset = 4
 text_max_width = tb_width - (text_offset * 2);
@@ -10,6 +10,8 @@ x_origin = (view_width / 2) - (tb_width / 2);
 y_origin = (view_height - tb_height - 4);
 
 state = tb.open;
+autoscroll = false;
+name_width = 1;
 
 dialog[NAME,	0] = "MyName";
 dialog[MESSAGE,	0] = "This is a test message.";
@@ -28,7 +30,7 @@ txt_buff = 20;
 anim_speed = 3;
 alarm[0] = txt_speed;
 
-function string_wrap(str,max_width){
+string_wrap = function(str,max_width){
 	var str_len = string_length(str);
 	var last_space = 1;
 
