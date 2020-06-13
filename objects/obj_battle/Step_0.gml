@@ -11,8 +11,14 @@ if (actionable) {
 	}
 	if (key_action){
 		if (current_menu != items) {
-			if (menu_index == 2) {
-				current_menu = items;
+			if (menu_index == 2){
+				if (check_inv(items)){
+					current_menu = items;
+				} else {
+					current_menu = player_actions;
+					add_battle_text("", "All out of items!");
+					with (battle_textbox) event_perform(ev_alarm,1);
+				}
 			} else {
 				add_battle_turn(menu_index);
 			}

@@ -6,7 +6,6 @@ current_action = -1;
 current_item = "";
 actionable = true;
 menu_index = 0;
-do_action = false;
 
 player_actions	= ["Attack", "Defend", "Item", "Run"];
 enemy_actions	= ["Attack 1", "Attack 2", "Attack 3", "Attack 4"];
@@ -25,11 +24,22 @@ enum turn {
 
 battle_textbox = (instance_create_layer(0,0,layer,obj_txtbox));
 with (battle_textbox){
+	var flavor_line = choose(
+		" wants to rumble!",
+		" has something to say.",
+		" wants to punch you a little.",
+		" wants to dance, but not like, romantically. They wanna dance violently, like with fists.",
+		" has a gift for you!\n(it's a knuckle sandwich)",
+		" would like to deplete your HP over a series of violent, yet ordered attacks.",
+	);
+	
 	battle_mode = true;
 	dialog[NAME, lines] = "";
-	dialog[MESSAGE, lines++] = other.current_enemy + " wants to rumble!";
+	dialog[MESSAGE, lines++] = other.current_enemy + flavor_line;
 	string_wrapped = string_wrap(dialog[MESSAGE,lines_index], text_max_width);
 	name_width = string_width(dialog[NAME,lines_index]) + 8;
+	tb_height = max(30, string_height(string_wrapped) + 6);
+	y_origin = (view_height - tb_height - 4);
 }
 
 
@@ -53,7 +63,7 @@ add_battle_turn = function(index){
 			ds_queue_enqueue(battle_queue,[turn.defend,str]);
 		break;
 		case 2: 
-			str = "Player uses a " + current_item + ".";
+			str = "Player uses a " + current_item + "!";
 			ds_queue_enqueue(battle_queue,[turn.item,str]);
 		break;
 		case 3: 
@@ -67,4 +77,14 @@ add_battle_turn = function(index){
 	ds_queue_enqueue(battle_queue,[turn.finish]);
 	
 	actionable = false;
+}
+
+check_inv = function(array){
+	var flag = false;
+	var len = array_length(array);
+	var i = 0; repeat(len){
+		if (array[i] != "------") {flag = true; break}
+		i++;
+	}
+	return flag;
 }
