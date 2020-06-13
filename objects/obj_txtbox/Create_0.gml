@@ -13,6 +13,8 @@ state = tb.open;
 autoscroll = false;
 name_width = 1;
 
+battle_mode = false;
+
 dialog[NAME,	0] = "MyName";
 dialog[MESSAGE,	0] = "This is a test message.";
 

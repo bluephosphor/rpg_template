@@ -2,7 +2,7 @@ alarm[0] = 1;
 
 globalvar view_width, view_height;
 
-true_pixel_mode = true;
+true_pixel_mode = false;
 
 view_width = 320;
 view_height = 180;
@@ -22,3 +22,4 @@ if (!true_pixel_mode) {
 	surf_height *= pixel_scale;
 }
 surface_resize(application_surface, surf_width, surf_height);
+display_set_gui_size(view_width, view_height);

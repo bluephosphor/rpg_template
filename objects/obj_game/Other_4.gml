@@ -1,3 +1,5 @@
+if (!instance_exists(obj_actor)) exit;
+
 var i = 0, list = []; with (obj_actor){
 	list[i++] = id;
 }

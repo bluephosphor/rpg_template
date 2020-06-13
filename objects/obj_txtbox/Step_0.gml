@@ -8,13 +8,13 @@ switch(state){
 		}
 	break;
 	case tb.type:
-		if (keyboard_check_pressed(input[| key.action])){
+		if (!battle_mode and keyboard_check_pressed(input[| key.action])){
 			var len = string_length(string_wrapped);
 			if (char_index < len) {
 				char_index = len;
 				current_string = string_wrapped;
 			} else {
-				event_perform(ev_alarm,1);
+				 event_perform(ev_alarm,1);
 			}
 		}
 	break;
