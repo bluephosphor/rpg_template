@@ -1,3 +1,7 @@
+globalvar data_structures, ds_index;
+
+ds_index = 0;
+
 #macro FRAMERATE 60
 #macro CELLSIZE 32
 #macro VIEW view_camera[0]

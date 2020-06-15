@@ -19,6 +19,7 @@
     {"id":{"name":"spr_col","path":"sprites/spr_col/spr_col.yy",},"order":2,},
     {"id":{"name":"spr_indoors_night","path":"sprites/spr_indoors_night/spr_indoors_night.yy",},"order":1,},
     {"id":{"name":"TEXT","path":"scripts/TEXT/TEXT.yy",},"order":3,},
+    {"id":{"name":"ITEM_INFO","path":"scripts/ITEM_INFO/ITEM_INFO.yy",},"order":5,},
     {"id":{"name":"quack_adapter","path":"scripts/quack_adapter/quack_adapter.yy",},"order":13,},
     {"id":{"name":"spr_city","path":"sprites/spr_city/spr_city.yy",},"order":3,},
     {"id":{"name":"quack_eval_variable","path":"scripts/quack_eval_variable/quack_eval_variable.yy",},"order":3,},

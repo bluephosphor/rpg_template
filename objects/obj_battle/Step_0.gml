@@ -22,10 +22,10 @@ if (actionable) {
 			} else {
 				add_battle_turn(menu_index);
 			}
-		} else if (items[menu_index] != "------"){
+		} else if (items[menu_index] != item.none){
 			current_item = items[menu_index];
 			current_menu = player_actions;
-			items[menu_index] = "------";
+			items[menu_index] = item.none;
 			add_battle_turn(turn.item);
 		}
 		menu_index = 0;
@@ -42,29 +42,24 @@ if (actionable) {
 			break;
 			case turn.item: 
 				add_battle_text("", current_action[1]);
-				var str = "";
-				switch(current_item){
-					case "Potion":			str = "Player recovered some HP!"; break;
-					case "Water Bottle":	str = "Gotta stay hydrated."; break;
-					case "Sandwich":		str = "Uh, guess this is as good a time as any for a snack?"; break;
-					case "Gun":				str = "...What the fuck?"; break;
-					case "Hand Sanitizer":	str = current_enemy + " appreciates your cleanliness as we all navigate these uncertain times together."; break;
+				var item_line = current_item.battle_text;
+				if (variable_struct_exists(current_enemy,"special_lines")){
+					var list = current_enemy.special_lines;
+					var i = 0; repeat(array_length(list)){
+						if (list[i][0] == current_item) {
+							item_line = list[i][1];
+							break;
+						}
+						i++;
+					}
 				}
-				add_battle_text("", str);
+				add_battle_text("", item_line);
 			break;
 			case turn.finish: 
-				var flavor_line = choose(
-					" is waiting for your move.",
-					" is twiddling their thumbs.",
-					" thought about something funny they heard on a podcast this morning.",
-					" is trying really hard to look intimidating.",
-					" is just vibing.",
-					" looks kinda impatient.",
-					" has to go to the DMV after this.",
-					" is wondering what to have for dinner tonight."
-				);
+				var i = irandom(array_length(current_enemy.mid_battle_lines)-1);
+				var flavor_line = current_enemy.mid_battle_lines[i];
 				
-				add_battle_text("", current_enemy + flavor_line);
+				add_battle_text("", current_enemy.title + flavor_line);
 				with (battle_textbox) event_perform(ev_alarm,1);
 			break;
 		}

@@ -1,16 +1,16 @@
-current_enemy = "Test Enemy";
+current_enemy = enemy.sudsy;
 
 battle_queue = ds_queue_create();
 
 current_action = -1;
 current_item = "";
+item_to_display = "";
 actionable = true;
 menu_index = 0;
 
 player_actions	= ["Attack", "Defend", "Item", "Run"];
-enemy_actions	= ["Attack 1", "Attack 2", "Attack 3", "Attack 4"];
-
-items = ["Potion", "Water Bottle", "Sandwich", "Gun", "Hand Sanitizer"];
+enemy_actions	= current_enemy.moves;
+items = [item.potion,item.potion,item.potion,item.hand_sanitizer,item.gun,item.water_bottle,item.sandwich];
 
 current_menu = player_actions;
 
@@ -24,18 +24,12 @@ enum turn {
 
 battle_textbox = (instance_create_layer(0,0,layer,obj_txtbox));
 with (battle_textbox){
-	var flavor_line = choose(
-		" wants to rumble!",
-		" has something to say.",
-		" wants to punch you a little.",
-		" wants to dance, but not like, romantically. They wanna dance violently, like with fists.",
-		" has a gift for you!\n(it's a knuckle sandwich)",
-		" would like to deplete your HP over a series of violent, yet ordered attacks.",
-	);
+	var i = irandom(array_length(other.current_enemy.intro_lines)-1);
+	var flavor_line = other.current_enemy.intro_lines[i];
 	
 	battle_mode = true;
 	dialog[NAME, lines] = "";
-	dialog[MESSAGE, lines++] = other.current_enemy + flavor_line;
+	dialog[MESSAGE, lines++] = other.current_enemy.title + flavor_line;
 	string_wrapped = string_wrap(dialog[MESSAGE,lines_index], text_max_width);
 	name_width = string_width(dialog[NAME,lines_index]) + 8;
 	tb_height = max(30, string_height(string_wrapped) + 6);
@@ -63,7 +57,7 @@ add_battle_turn = function(index){
 			ds_queue_enqueue(battle_queue,[turn.defend,str]);
 		break;
 		case 2: 
-			str = "Player uses a " + current_item + "!";
+			str = "Player uses a " + current_item.title + "!";
 			ds_queue_enqueue(battle_queue,[turn.item,str]);
 		break;
 		case 3: 
@@ -72,7 +66,7 @@ add_battle_turn = function(index){
 		break;
 	}
 	num = irandom(array_length(enemy_actions) - 1);
-	str = current_enemy + " attacks with " + enemy_actions[num] + "!";
+	str = current_enemy.title + " uses " + enemy_actions[num] + "!";
 	ds_queue_enqueue(battle_queue,[turn.attack,str]);
 	ds_queue_enqueue(battle_queue,[turn.finish]);
 	
@@ -83,7 +77,7 @@ check_inv = function(array){
 	var flag = false;
 	var len = array_length(array);
 	var i = 0; repeat(len){
-		if (array[i] != "------") {flag = true; break}
+		if (array[i] != item.none) {flag = true; break}
 		i++;
 	}
 	return flag;
