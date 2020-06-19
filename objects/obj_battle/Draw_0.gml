@@ -12,3 +12,14 @@ if (actionable) {
 	}
 	if (current_menu == items) battle_textbox.current_string = string_wrap(items[menu_index].desc,battle_textbox.text_max_width);
 }
+
+if (enemy_spr != -1){
+	var num = sprite_get_number(enemy_spr);
+	var xx, yy, i = 0, offset = 0; 
+	repeat(num){
+		xx = view_width / 2;
+		yy = view_height / 2 + wave(-2,2,1,i * 0.05);
+		draw_sprite(enemy_spr,i,xx,yy);
+		i++;
+	}
+}

@@ -76,6 +76,7 @@ enemy = {
 		special_lines: [
 			[item.hand_sanitizer,"Sudsy scoffs at your performative cleanliness. Sudsy clearly knows that only a proper and thorough wash with soap and water (and proper scrubbing times!) will properly disinfect you!"],
 			[item.water_bottle,"Sudsy would rather you used that water bottle to clean yourself..."]
-		]
+		],
+		sprite: spr_sudsy_battle
 	}
 }

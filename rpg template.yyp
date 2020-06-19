@@ -3,6 +3,7 @@
     {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},"order":0,},
     {"id":{"name":"quack_state_cleanup","path":"scripts/quack_state_cleanup/quack_state_cleanup.yy",},"order":7,},
     {"id":{"name":"quack_state_set_passage","path":"scripts/quack_state_set_passage/quack_state_set_passage.yy",},"order":11,},
+    {"id":{"name":"spr_sudsy_battle","path":"sprites/spr_sudsy_battle/spr_sudsy_battle.yy",},"order":4,},
     {"id":{"name":"spr_female_office_worker_idle","path":"sprites/spr_female_office_worker_idle/spr_female_office_worker_idle.yy",},"order":0,},
     {"id":{"name":"par_depthobject","path":"objects/par_depthobject/par_depthobject.yy",},"order":4,},
     {"id":{"name":"ts_city","path":"tilesets/ts_city/ts_city.yy",},"order":4,},
@@ -109,7 +110,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "23.1.1.149",
+    "IDEVersion": "23.1.1.157",
   },
   "resourceVersion": "1.3",
   "name": "rpg template",

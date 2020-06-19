@@ -1,4 +1,5 @@
 current_enemy = enemy.sudsy;
+enemy_spr = (variable_struct_exists(current_enemy,"sprite")) ? current_enemy.sprite : -1;
 
 battle_queue = ds_queue_create();
 
