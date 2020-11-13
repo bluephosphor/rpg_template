@@ -10,10 +10,10 @@ if (keyboard_check(vk_shift)){
 		}
 	}
 	
-	if (keyboard_check_pressed(vk_pageup)) {
+	if (keyboard_check_pressed(vk_up)) {
 		if (room_next(room) != -1) room_goto_next();
 		else room_goto(0);
-	} else if (keyboard_check_pressed(vk_pagedown)) {
+	} else if (keyboard_check_pressed(vk_down)) {
 		if (room_previous(room) != -1) room_goto_previous();
 		else room_goto(room_count - 1);
 	}

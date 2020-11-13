@@ -17,7 +17,7 @@ ds_grid_sort(dgrid,1,true);
 yy = 0; var inst; repeat(inst_num){
 	//get id
 	inst = dgrid[# 0, yy];
-	// get inst to draw itself
+	//get inst to draw itself
 	with(inst){
 		event_perform(ev_draw,0);
 	}
